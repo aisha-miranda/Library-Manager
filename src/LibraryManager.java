@@ -11,4 +11,12 @@ public class LibraryManager {
     public void addUser(User user) {
         users.put(user.getId(), user);
     }
+
+    public List<Book> getBooks() {
+        return books;
+    }
+
+    public List<User> getUsers() {
+        return new ArrayList<>(users.values());
+    }
 }
