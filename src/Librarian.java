@@ -12,5 +12,14 @@ public class Librarian extends User {
             System.out.println("Книга недоступна для выдачи");
         }
     }
+
+    public void receiveBook(Book book, Student student) {
+        if (student.getBorrowedBooks().remove(book)) {
+            book.setAvailable(true);
+            System.out.println("Книга '" + book.getTitle() + "' возвращена в библиотеку");
+        } else {
+            System.out.println("У студента нет этой книги");
+        }
+    }
 }
 
