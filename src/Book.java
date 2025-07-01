@@ -33,3 +33,5 @@ public class Book {
     @Override
     public String toString() {
         return "[" + id + "] " + title + " (" + author + ", " + year + ") - " + (isAvailable ? "Доступна" : "Выдана");
+    }
+}
